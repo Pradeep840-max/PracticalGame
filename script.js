@@ -98,6 +98,11 @@ function drawParticles() {
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
         ctx.stroke();
+        document.addEventListener("touchmove", function(e) {
+    let touch = e.touches[0];
+    mouseX = touch.clientX;
+    mouseY = touch.clientY;
+});
       }
     }
   }
@@ -108,5 +113,6 @@ function loop() {
   drawParticles();
   requestAnimationFrame(loop);
 }
+
 
 loop();
