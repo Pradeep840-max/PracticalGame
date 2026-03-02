@@ -75,32 +75,6 @@ body::before{
     <div class="fire"></div>
 </div>
 
-<script>
-const dragon = document.getElementById("dragon");
-
-let mouseX = 0;
-let mouseY = 0;
-let posX = window.innerWidth / 2;
-let posY = window.innerHeight / 2;
-
-// Smooth Follow Animation
-function animate(){
-    posX += (mouseX - posX) * 0.08;
-    posY += (mouseY - posY) * 0.08;
-
-    dragon.style.left = posX + "px";
-    dragon.style.top = posY + "px";
-
-    requestAnimationFrame(animate);
-}
-animate();
-
-// Track Mouse
-document.addEventListener("mousemove", (e)=>{
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
-</script>
-
 </body>
+
 </html>
